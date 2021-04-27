@@ -1,0 +1,96 @@
+@mixin reset-border {
+    border-radius: 0;
+    border: none;
+}
+
+$height-components: 30px;
+
+body {
+    margin: 0;
+}
+
+.index {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__card {
+        width: 600px;
+        height: 100%;
+        padding: 20px;
+
+        background-color: #ffffff;
+        border-radius: 10px;
+
+        &__label {
+            font-weight: 900;
+        }
+
+        &__input {
+            @include reset-border();
+
+            margin-right: 5px;
+            margin-top: 5px;
+
+            width: 500px;
+            height: $height-components;
+
+            border: 2px solid #bbbaba;
+            padding: 3px;
+
+            font-size: 15px;
+            
+        }
+
+        &__button {
+            @include reset-border();
+
+            background: #0fa80f;
+            width: 85px;
+            height: 40px;
+            padding: 7px;
+            color: #ffffff;
+            font-weight: bold;
+
+            &:hover {
+                background: #0b800b;
+                cursor: pointer;
+            }
+        }
+
+        &__button2 {
+            @include reset-border();
+
+            background: #0fa80f;
+            width: 100%;
+            height: 40px;
+            padding: 7px;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 20px;
+
+            &:hover {
+                background: #0b800b;
+                cursor: pointer;
+            }
+        }
+
+        &__team {
+            
+            width: 100%;
+            height: 80px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 15px;
+            margin-bottom: 10px;
+            
+            background-color: #d9f7f2;
+        }
+    }
+}

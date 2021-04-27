@@ -1,7 +1,6 @@
 <template>
     <div class="content">
         <router-view></router-view>
-        __
     </div>
 </template>
 <script lang="ts">
@@ -16,10 +15,14 @@ export default class Content extends Vue {
 </script>
 
 <style lang="scss">
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
     .content {
+        background-color: #039b9b;
         grid-area: content;
-        background-color: blue;
         padding: 20px;
     }
 
