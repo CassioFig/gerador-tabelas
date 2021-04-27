@@ -1,30 +1,35 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+	  <Header/>
+	  <Content/>
   </div>
-  <router-view/>
 </template>
 
+<script lang="ts">
+import Content from "./components/template/content/Content.vue"
+import Header from "./components/template/header/Header.vue"
+import { Options, Vue } from "vue-class-component";
+
+@Options({
+    name: "App",
+	components: { Content, Header }
+})
+export default class App extends Vue {
+	
+}
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+	* {
+		margin: 0;
+		padding: 0;
+	}
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+	#app {
+		height: 100vh;
+		display: grid;
+		grid-template-rows: 150px 1fr 40px;
+		grid-template-areas: 
+			"header"
+			"content";
+	}
 </style>
