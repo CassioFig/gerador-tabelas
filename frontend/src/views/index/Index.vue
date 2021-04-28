@@ -61,6 +61,7 @@ export default class Index extends Vue {
         axios.post(url, this.listTeams)
             .then((response): void => {
                 store.commit('setGames', response.data)
+                store.commit('setTeams', this.listTeams.teams)
                 router.push({path: '/table'})
             })
     }
