@@ -6,8 +6,7 @@
 </template>
 
 <script lang="ts">
-import Content from "./components/template/content/Content.vue"
-import Header from "./components/template/header/Header.vue"
+import { Content, Header } from "./components/template"
 import { Options, Vue } from "vue-class-component";
 
 @Options({

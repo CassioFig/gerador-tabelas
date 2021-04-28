@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Index from "../views/index/Index.vue"
-import Table from "../views/table/Table.vue"
+import { Index, Table } from '../views'
 
 const routes: Array<RouteRecordRaw> = [
 	{
