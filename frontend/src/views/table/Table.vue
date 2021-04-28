@@ -2,6 +2,7 @@
     <div class="table">
         <Ranking/>
         <Games />
+        <button class="btn__print" @click="print()">Imprimir Página</button>
     </div>
 </template>
 
@@ -16,6 +17,10 @@ import store from '../../store/index'
 })
 export default class Table extends Vue {
     games:any = store.state.games;
+
+    print() {
+        window.print()
+    }
 }
 </script>
 

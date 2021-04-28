@@ -9,3 +9,27 @@
     align-items: center;
     flex-direction: column;
 }
+
+.btn__print {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    border-radius: 0;
+    border: none;
+
+    background-color: #039b9b;
+    color: white;
+    
+    padding: 5px;
+    width: 30%;
+    height: 45px;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    &:hover {
+        background-color: #026b6b;
+        cursor: pointer;
+    }
+
+}
