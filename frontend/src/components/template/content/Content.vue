@@ -3,16 +3,6 @@
         <router-view></router-view>
     </div>
 </template>
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-
-@Options({
-    name: "Content",
-})
-export default class Content extends Vue {
-	
-}
-</script>
 
 <style lang="scss">
     body {
@@ -21,8 +11,8 @@ export default class Content extends Vue {
     }
 
     .content {
-        background-color: #039b9b;
         grid-area: content;
+        background-color: #039b9b;
     }
 
 </style>
