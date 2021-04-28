@@ -23,7 +23,6 @@ export default class Content extends Vue {
     .content {
         background-color: #039b9b;
         grid-area: content;
-        padding: 20px;
     }
 
 </style>
