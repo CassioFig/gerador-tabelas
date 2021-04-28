@@ -36,6 +36,8 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import axios from 'axios';
+import router from '../../router/index'
+import store from '../../store/index'
 
 @Options({
     name: 'Index',
@@ -57,8 +59,9 @@ export default class Index extends Vue {
     generateGames() {
         const url = "http://localhost:3000/api/generator";
         axios.post(url, this.listTeams)
-            .then((response) => {
-                console.log(response.data)
+            .then((response): void => {
+                store.commit('setGames', response.data)
+                router.push({path: '/table'})
             })
     }
 }
